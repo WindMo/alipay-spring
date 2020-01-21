@@ -21,7 +21,7 @@ public class InterceptorConfig extends WebMvcConfigurationSupport {
         registry.addInterceptor(new LoginInterceptor()).
                 addPathPatterns("/*").
                 excludePathPatterns("/login").
-//                excludePathPatterns("/index").
+                excludePathPatterns("/index").
                 excludePathPatterns("/recharge/notify");// 这里放行支付宝异步通知，原因是请求不来自用户，把通知拦截了就不对了
 
         super.addInterceptors(registry);
