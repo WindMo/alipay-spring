@@ -45,7 +45,7 @@ public class RechargeHandler {
 
         String username = (String)session.getAttribute("username");
         String accountId = daoGetAccountId(username);
-        rechargeService.rchargeByUserId(accountId,money,alipayConfig,request,response);
+        rechargeService.rechargeByUserId(accountId,money,alipayConfig,request,response);
     }
 
     // 同步通知
@@ -126,17 +126,17 @@ public class RechargeHandler {
                 //付款完成后，支付宝系统发送该交易状态通知
             }
 
-          // succeed
+
+           return "success";
 
         }else {//验证失败
 
             //调试用，写文本函数记录程序运行情况是否正常
             //String sWord = AlipaySignature.getSignCheckContentV1(params);
             //AlipayConfig.logResult(sWord);
+            return "fail";
         }
 
-
-        return "";
         //↑↑↑↑↑执行业务↑↑↑↑↑//
     }
 

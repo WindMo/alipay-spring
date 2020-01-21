@@ -25,7 +25,7 @@ public class RechargeServiceImp implements RechargeService {
     @Autowired
     AlipayService alipayService;
     @Override
-    public void rchargeByUserId(String accountId, Double money, AlipayConfig alipayConfig, HttpServletRequest request, HttpServletResponse response) {
+    public void rechargeByUserId(String accountId, Double money, AlipayConfig alipayConfig, HttpServletRequest request, HttpServletResponse response) {
 
         // 配置订单信息
         TradeInfo tradeInfo = new TradeInfo();
