@@ -12,5 +12,5 @@ import javax.servlet.http.HttpServletResponse;
 
 public interface RechargeService {
 
-    void rechargeByUserId(String accountId, Double money, AlipayConfig alipayConfig, HttpServletRequest request, HttpServletResponse response);
+    void rechargeByAccountId(String accountId, Double money, AlipayConfig alipayConfig, HttpServletRequest request, HttpServletResponse response);
 }

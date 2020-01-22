@@ -15,7 +15,7 @@ public interface AlipayService {
      *  支付宝服务接口
      */
 
-    // 充值
+    // 支付
     boolean pay(AlipayConfig alipayConfig, TradeInfo orderInfo, HttpServletRequest request, HttpServletResponse response);
 
     // 支付宝验签

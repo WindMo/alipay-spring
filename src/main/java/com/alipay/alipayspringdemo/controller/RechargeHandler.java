@@ -45,7 +45,7 @@ public class RechargeHandler {
 
         String username = (String)session.getAttribute("username");
         String accountId = daoGetAccountId(username);
-        rechargeService.rechargeByUserId(accountId,money,alipayConfig,request,response);
+        rechargeService.rechargeByAccountId(accountId,money,alipayConfig,request,response);
     }
 
     // 同步通知
